@@ -7,7 +7,8 @@
   background: #209cee;
   padding: 30px;
   height: 100vh;
-  max-width: 60vw;
+  width: 60vh;
+  overflow-y: scroll;
 }
 
 .todo-list {
@@ -17,14 +18,11 @@
   max-width: 40vw;
 }
 
-.todo {
-  background: #fff;
-  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.15);
-  padding: 3px 10px;
-  font-size: 12px;
-  margin-bottom: 6px;
-  border-radius: 3px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+.todo-list > div {
+  margin-top: 10px;
+}
+
+
+.todo-list > form {
+  margin-top: 5px;
 }

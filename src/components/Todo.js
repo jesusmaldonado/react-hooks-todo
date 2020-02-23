@@ -8,14 +8,20 @@ const Todo = ({todo, index, completeTodo, removeTodo}) => {
   const handleRemoveClick = (evt) => {
     removeTodo(index);
   }
-  return (<div
-      className="todo card-content"
-      style={{'text-decoration': todo.isCompleted ? 'line-through': ''}}>
-    {todo.text}
-    <button type="button" onClick={handleCompleteClick}>
-      Complete
-    </button>
-    <button onClick={handleRemoveClick}>x</button>
+  return (
+    <div
+      className="card w-auto p-3"
+      style={{'textDecoration': todo.isCompleted ? 'line-through': ''}}>
+      <div className="card-header">
+        {todo.text}
+      </div>
+      <div className="card-body text-right">
+        <button className="btn btn-primary mr-1" type="button" onClick={handleCompleteClick}>
+          Complete
+        </button>
+        <button className="btn btn-danger" onClick={handleRemoveClick}>x</button>
+      </div>
+
   </div>);
 };
 

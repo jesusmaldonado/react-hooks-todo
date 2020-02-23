@@ -19,10 +19,10 @@ function App() {
   const removeTodo = useCallback(index => {
     const newTodos = todos.filter((t, idx) => idx !== index);
     setTodos(newTodos);
-  });
+  }, [todos]);
   return (
     <div className="app">
-      <h1> ToDo List  </h1>
+      <h2 className="text-monospace"> Todo List  </h2>
       <TodoList todos={todos} addTodo={addTodo} completeTodo={completeTodo} removeTodo={removeTodo}/>
     </div>
   );

@@ -12,12 +12,15 @@ export default function TodoForm({ addTodo }) {
 
   return (
     <form onSubmit={handleSubmit}>
+    <div className="form-group">
       <input
         type="text"
-        className="input"
+        className="form-control"
         value={value}
+        placeholder="Add a sample todo item here"
         onChange={e => setValue(e.target.value)}
       />
+    </div>
     </form>
   );
 }
